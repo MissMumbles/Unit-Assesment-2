@@ -55,8 +55,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 
 //CODE HERE
-function canWeDeliver(zipcode){
-}
+const canWeDeliver = (zip) => {
+    for(let i=0;i<deliveryAreaZipCodes.length;i++){
+        if(deliveryAreaZipCodes[i]=== zip){
+            return `You're in our delivery zone!`;
+        }
+    }
+    return 'You are not in our delivery zone...';
+};
+
+console.log(canWeDeliver(85206));
 
 
 /* 
@@ -78,7 +86,19 @@ function canWeDeliver(zipcode){
 
 // CODE HERE
 
+function canWeDeliverTwo(){
+    if(deliveryAreaZipCodes.includes(85205)===true){
+        return `yes deliver`
+    } else if (
+        deliveryAreaZipCodes.includes(85204)===true
+    )
+};
+console.log(canWeDeliverTwo(85205));
 
+
+
+
+// uuuuuuhhgggg...
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -92,7 +112,7 @@ function canWeDeliver(zipcode){
     Read on for more instructions.
 */
 
-const deals = [
+ const deals = [
     {
         title: '15% Off!', 
         desc: 'Applied to your entire order when you spend $30 or more'
@@ -113,7 +133,11 @@ const deals = [
 */
 
 //CODE HERE
-function change 
+console.log(deals[0].title);
+
+deals[0].title = deals[0].title.replace('15%','10%');
+
+console.log(deals[0].title);
 
 
 /*
@@ -130,3 +154,8 @@ function change
 */
 
 //CODE HERE
+console.log(deals[1]);
+
+deals[1].desc = deals[1].desc.replace('March', 'April').trim();
+
+console.log(deals[1]);

@@ -132,7 +132,7 @@ let foodArr =[
         category: 'appetizer',
         popularity: 100,
         rating: 99,
-        tags: ['gluten-free','fresh','kids']
+        tags: ['Gluten-free','Fresh!','kids']
     },
     
     {
@@ -159,7 +159,8 @@ let foodArr =[
 //CODE HERE
 
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((food)=> food.tags.includes('Gluten-free'));
+console.log(filteredFood);
 
 
 
@@ -203,7 +204,18 @@ let foodArr =[
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type)=>{
+    const filterArr= foodArr.filter((food) => {
+        if (type === 'above'){
+            return food[property]> number;
+        }
 
+        if(type === 'below'){
+            return food[property] < number;
+        }
+});
+return filterArr;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -213,3 +225,4 @@ let foodArr =[
 */
 
 //CODE HERE
+console.log(filterByProperty('rating',50,'below'))

@@ -102,11 +102,16 @@ class Manager extends Employee {
     getEmployees(){
         console.log(this.name, 'manages', this.employees)
     }
-    addEmployee(emp){
+    addEmployee=(emp)=>{
         
+        if(typeof this.employees ==="Array"){
+            this.employees.push(emp);
+        }
     }
-
+        
 }
+
+
 
 
 /*
@@ -121,7 +126,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
-let manager = new Manager('Winston','weekday mornigns, weekday afternoons','Cece and Schmidt')
+let manager = new Manager('Winston',['weekday mornings'], ['weekday afternoons'],['Cece, Schmidt'])
 
 /*
     Call the `getEmployees` method on the
@@ -137,7 +142,7 @@ manager.getEmployees()
 */
 
 //CODE HERE 
-
+manager.addEmployee('Coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 

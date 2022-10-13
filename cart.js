@@ -34,12 +34,10 @@ const cart = [
 ]
 
 //CODE HERE
-
-const summedPrice = cart.reduce(function(acc,curr){
-    return acc + curr
-})
-
-
+const initialPrice =0;
+const summedPrice = cart.reduce((foodPrice,newPrice)=> cart.price + cart.price);
+console.log(summedPrice);
+// const filteredFood = foodArr.filter((food)=> food.tags.includes('Gluten-free'));
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -56,7 +54,9 @@ const summedPrice = cart.reduce(function(acc,curr){
 */
 
 //CODE HERE
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    
+}
 
 
 //////////////////PROBLEM 3////////////////////
